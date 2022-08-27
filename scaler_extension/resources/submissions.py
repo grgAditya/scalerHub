@@ -33,7 +33,7 @@ class SubmissionsResource:
         try:
             request_body = req.body
             submission_service = SubmissionsService()
-            submission_service.submit_solution()
+            submission_service.submit_solution(**request_body)
         except Exception as e:
             raise e
         pass
